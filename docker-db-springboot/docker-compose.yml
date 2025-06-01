@@ -1,0 +1,22 @@
+services:
+  my-spring-server:
+    build: .
+    ports:
+      - 8080:8080
+    depends_on:
+      my-mysql-server:
+        condition: service_healthy
+
+  my-mysql-server:
+    image: mysql
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: mydb
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD","mysqladmin","ping"]
+      interval: 5s
+      retries: 10
