@@ -6,6 +6,8 @@ services:
     depends_on:
       my-db-server:
         condition: service_healthy
+      my-cache-server:
+        condition: service_healthy
 
   my-db-server:
     image: mysql
