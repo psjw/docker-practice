@@ -2,6 +2,12 @@
 <project version="4">
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="docker-db-cache-springboot" options="-parameters" />
+      <module name="docker-db-cache-springboot.main" options="-parameters" />
+      <module name="docker-db-cache-springboot.test" options="-parameters" />
+      <module name="docker-db-springboot" options="-parameters" />
+      <module name="docker-db-springboot.main" options="-parameters" />
+      <module name="docker-db-springboot.test" options="-parameters" />
       <module name="docker-springboot" options="-parameters" />
       <module name="docker-springboot.main" options="-parameters" />
       <module name="docker-springboot.test" options="-parameters" />
